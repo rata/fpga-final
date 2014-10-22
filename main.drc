@@ -1,0 +1,21 @@
+Release 14.7 Drc P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Oct 22 11:54:45 2014
+
+drc -z main.ncd main.pcf
+
+WARNING:PhysDesignRules:367 - The signal <N6/mem/Mram_image1/F7.A> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N6/mem/Mram_image1/A> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N6/mem/Mram_image1/C> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N22/mem/Mram_image9/F7.A> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N22/mem/Mram_image9/C> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <N22/mem/Mram_image9/A> is incomplete.
+   The signal does not drive any load pins in the design.
+DRC detected 0 errors and 6 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
