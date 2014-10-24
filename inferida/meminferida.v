@@ -18,17 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module meminferida(
+module meminferida
+	#(parameter RAM_WIDTH=8,
+		RAM_ADDR_BITS=16)
+	(
 	input wire clk,
 	input wire write_enable,
 	input wire [RAM_ADDR_BITS-1:0] addr,
 	input wire [RAM_WIDTH-1:0] DI,
 	output wire [RAM_WIDTH-1:0] DO	
 ); 
-
-
-parameter RAM_WIDTH = 8;
-parameter RAM_ADDR_BITS = 10;
 
 reg [RAM_WIDTH-1:0] image [(2**RAM_ADDR_BITS)-1:0];
 
