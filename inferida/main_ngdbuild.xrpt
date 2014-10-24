@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Wed Oct 22 11:54:24 2014">
+  <application stringID="NgdBuild" timeStamp="Fri Oct 24 12:53:24 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -16,7 +16,7 @@
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/opt/intel/icsxe/2012.0.032/bin:/opt/intel/vtune_amplifier_xe_2011/bin64:/opt/intel/inspector_xe_2011/bin64:/opt/intel/itac/8.0.3.007/bin:/opt/intel/impi/4.0.3.008/intel64/bin:/opt/intel/composer_xe_2011_sp1.6.233/bin/intel64:/opt/intel/composer_xe_2011_sp1.7.256/bin/intel64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/MATLAB/R2011b/bin:/opt/intel/composer_xe_2011_sp1.7.256/mpirt/bin/intel64:/opt/intel/composer_xe_2011_sp1.6.233/mpirt/bin/intel64:/opt/g09:/opt/XCrySDen-1.4.1bin-static"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/opt/intel/icsxe/2012.0.032/bin:/opt/intel/vtune_amplifier_xe_2011/bin64:/opt/intel/inspector_xe_2011/bin64:/opt/intel/itac/8.0.3.007/bin:/opt/intel/impi/4.0.3.008/intel64/bin:/opt/intel/composer_xe_2011_sp1.6.233/bin/intel64:/home/rcampos/bin:/opt/intel/composer_xe_2011_sp1.7.256/bin/intel64:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/MATLAB/R2011b/bin:/opt/intel/composer_xe_2011_sp1.7.256/mpirt/bin/intel64:/opt/intel/composer_xe_2011_sp1.6.233/mpirt/bin/intel64:/opt/g09:/opt/XCrySDen-1.4.1bin-static"/>
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
@@ -27,12 +27,12 @@
         <item stringID="User_EnvOsname" value="Ubuntu"/>
         <item stringID="User_EnvOsrelease" value="Ubuntu 12.04.2 LTS"/>
       </item>
-      <item stringID="User_EnvHost" value="ws21.labo7"/>
+      <item stringID="User_EnvHost" value="ws23.labo7"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i5-3550 CPU @ 3.30GHz"/>
+          <item stringID="arch" value="Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz"/>
           <item stringID="speed" value="1600.000 MHz"/>
         </row>
       </table>
@@ -55,30 +55,34 @@
       </section>
       <section stringID="NGDBUILD_PRE_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFGP" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="18"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="17"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="5"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="7"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="17"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="12"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_RAM256X1S" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_RAM256X1S" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="18"/>
       </section>
       <section stringID="NGDBUILD_POST_UNISIM_SUMMARY">
         <item dataType="int" stringID="NGDBUILD_NUM_BUFG" value="1"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_DSP48A1" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_FD" value="18"/>
         <item dataType="int" stringID="NGDBUILD_NUM_GND" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_IBUFG" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_INV" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_LUT1" value="17"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="5"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="3"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT2" value="4"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT4" value="7"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_LUT6" value="7"/>
         <item dataType="int" stringID="NGDBUILD_NUM_MUXCY" value="17"/>
         <item dataType="int" stringID="NGDBUILD_NUM_OBUF" value="12"/>
-        <item dataType="int" stringID="NGDBUILD_NUM_RAM256X1S" value="2"/>
+        <item dataType="int" stringID="NGDBUILD_NUM_RAM256X1S" value="4"/>
         <item dataType="int" stringID="NGDBUILD_NUM_VCC" value="1"/>
         <item dataType="int" stringID="NGDBUILD_NUM_XORCY" value="18"/>
       </section>

@@ -1,4 +1,5 @@
 verilog work "meminferida.v"
 verilog work "hex_to_sseg.v"
+verilog work "div3.v"
 verilog work "disp_mux.v"
 verilog work "main.v"
