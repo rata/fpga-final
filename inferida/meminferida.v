@@ -31,10 +31,9 @@ module meminferida
 
 reg [RAM_WIDTH-1:0] image [(2**RAM_ADDR_BITS)-1:0];
 
-/*
+
 initial
-$readmemh("/home/itirabasso/fifo/imagentest.bin", image, 0, 24);
-*/
+$readmemh("ratacapo.txt", image, 0, 7);
 
 always @(posedge clk)
 	if (write_enable)

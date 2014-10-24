@@ -30,8 +30,8 @@ wire [15:0] addr;
 wire [7:0] DI;
 wire [7:0] DO;
 
-assign write_enable = 1'b1;
-assign addr = 16'hFF0F;
+assign write_enable = 1'b0;
+assign addr = 16'h0;
 assign DI = 8'hed;
 
 meminferida mem(.clk(clk), .write_enable(write_enable), .addr(addr), .DI(DI), .DO(DO));
