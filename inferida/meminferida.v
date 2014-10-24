@@ -32,6 +32,10 @@ module meminferida
 reg [RAM_WIDTH-1:0] image [(2**RAM_ADDR_BITS)-1:0];
 
 
+/* El formato del archivo a leer debe ser ASCII con los valores en hexa del binario que queremos cargar
+ *	ver http://forums.xilinx.com/t5/General-Technical-Discussion/Read-from-bin-files-to-Xilinx-ISE-using-Verilog/td-p/324803
+ *	para mas info
+*/
 initial
 $readmemh("ratacapo.txt", image, 0, 7);
 
