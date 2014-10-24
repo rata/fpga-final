@@ -44,7 +44,7 @@ wire [7:0] in_sseg_4;
 wire [3:0] tmp;
 wire [3:0] tmp2;
 
-assign tmp = DO;
+assign tmp = DO << 4 >> 4;
 assign tmp2 = DO >> 4;
 
 hex_to_sseg h2s_1 (.hex(tmp), .dp(1'b1), .sseg(in_sseg_1));
