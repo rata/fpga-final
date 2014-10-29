@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    12:34:03 10/24/2014 
+// Create Date:    11:45:15 10/29/2014 
 // Design Name: 
-// Module Name:    div3 
+// Module Name:    bwfilter 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,14 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module div3(
-	input wire [7:0] src,
-	output wire [7:0] dst
+module bwfilter(
+	input [23:0] pixel,
+	output [7:0] ret
 );
 
-/* Esto divide por 3 numeros en el rango de un byte */
-wire [31:0] ret;
-assign ret = (src * 15'd21849) >> 16;
-assign dst = ret << 24 >> 24;
+
 
 endmodule

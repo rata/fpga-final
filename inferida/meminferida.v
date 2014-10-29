@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module meminferida
-	#(parameter RAM_WIDTH=8,
+	#(parameter RAM_WIDTH=24,
 		RAM_ADDR_BITS=16)
 	(
 	input wire clk,
@@ -30,7 +30,6 @@ module meminferida
 ); 
 
 reg [RAM_WIDTH-1:0] image [(2**RAM_ADDR_BITS)-1:0];
-
 
 /* El formato del archivo a leer debe ser ASCII con los valores en hexa del binario que queremos cargar
  *	ver http://forums.xilinx.com/t5/General-Technical-Discussion/Read-from-bin-files-to-Xilinx-ISE-using-Verilog/td-p/324803

@@ -20,37 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module main(
 	input clk,
+	input sw,
    output [3:0] an,
    output [7:0] sseg
 );
 
-
-wire write_enable;
-wire [15:0] addr;
-wire [7:0] DI;
-wire [7:0] DO;
-
-assign write_enable = 1'b0;
-assign addr = 16'h0;
-assign DI = 8'hed;
-
-meminferida mem(.clk(clk), .write_enable(write_enable), .addr(addr), .DI(DI), .DO(DO));
-
-
-wire [7:0] in_sseg_1;
-wire [7:0] in_sseg_2;
-wire [3:0] tmp;
-wire [3:0] tmp2;
-
-wire [7:0] DO_div3;
-div3 div(.src(DO), .dst(DO_div3));
-
-assign tmp =  DO_div3 << 4 >> 4;
-assign tmp2 = DO_div3 >> 4;
-
-hex_to_sseg h2s_1 (.hex(tmp), .dp(1'b1), .sseg(in_sseg_1));
-hex_to_sseg h2s_2 (.hex(tmp2), .dp(1'b0), .sseg(in_sseg_2));
-
-disp_mux disp_m (.clk(clk), .reset(1'b0), .in0(in_sseg_1), .in1(in_sseg_2), .in2(8'hff), .in3(8'hff), .an(an), .sseg(sseg));
+procseq proc(.clk(clk), .reset(sw), .an(an), .sseg(sseg));
 
 endmodule
