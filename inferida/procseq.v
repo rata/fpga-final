@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool versions: 
 // Description: 
-//
+// 
 // Dependencies: 
 //
 // Revision: 
@@ -43,12 +43,10 @@ reg [9:0] addr_next;
 
 //assign write_enable = 1'b0;
 //assign addr = 16'h0;
-assign DI = 8'h00; //8'hed;
+assign DI = 24'h00; //8'hed;
 
 meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) src(.clk(clk), .write_enable(1'b0), .addr(addr_reg), .DI(DI), .DO(DO));
 meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) dst(.clk(clk), .write_enable(1'b1), .addr(addr_reg), .DI(DI_dst), .DO(DO_dst));
-
-
 
 always @(posedge clk, posedge reset) begin
 	if (reset) begin
@@ -63,23 +61,30 @@ end
 
 always @* begin
 	addr_next = addr_reg;
-	case (state_reg)
-		2'b00: // read
-			begin
-				addr_next = addr_reg + 1'b1;
-				state_next = 2'b01;
-			end
-		2'b01: // apply filter
-			begin
-				state_next = 2'b10;
-			end
-		2'b10: // write
-			begin
+	state_next = state_reg;
+   if (addr_next < 2) begin
+	   case (state_reg)
+			2'b00: // read
+				begin
+					addr_next = addr_reg + 1'b1;
+					state_next = 2'b01;
+				end
+			2'b01: // apply filter
+				begin
+					state_next = 2'b10;
+				end
+			2'b10: // write
+				begin
+					state_next = 2'b00;
+				end
+			2'b11:
 				state_next = 2'b00;
-			end
-		2'b11:
-			state_next = 2'b00;
-	endcase
+		endcase
+	end
+	else begin
+		state_next = 2'b00;
+		addr_next = 10'b0;
+	end
 end
 
 assign DI_dst = DO;
@@ -100,12 +105,22 @@ wire [7:0] DO_div3;
 div3 div1(.src(DO), .dst(DO_div3));
 div3 div2(.src(DO_dst), .dst(DO_dst_div3));
 
-assign tmp =  DO_div3 << 4 >> 4;
+//assign tmp =  DO_div3 << 4 >> 4;
 assign tmp2 = DO_div3 >> 4;
 
 assign tmp3 =  DO_dst_div3 << 4 >> 4;
 assign tmp4 = DO_dst_div3 >> 4;
- 
+
+//assign tmp3 = addr_reg << 4 >> 4;
+//assign tmp4 = addr_reg >> 4;
+
+wire _clk;
+
+assign tmp = (DO == 24'h060606) ? 4'b1 : 4'b0;
+
+
+//contador_digito cont1(.clk(clk), .reset(1'b0), .soft_reset(1'b0), .prev_tick(clk), .max_tick(_clk));
+//contador_n cont2(.clk(clk),  .reset(1'b0), .soft_reset(1'b0), .max_tick(_clk));
 
 hex_to_sseg h2s_1 (.hex(tmp), .dp(1'b0), .sseg(in_sseg_1));
 hex_to_sseg h2s_2 (.hex(tmp2), .dp(1'b0), .sseg(in_sseg_2));

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module meminferida
 	#(parameter RAM_WIDTH=24,
-		RAM_ADDR_BITS=16)
+		RAM_ADDR_BITS=10)
 	(
 	input wire clk,
 	input wire write_enable,
@@ -36,7 +36,7 @@ reg [RAM_WIDTH-1:0] image [(2**RAM_ADDR_BITS)-1:0];
  *	para mas info
 */
 initial
-$readmemh("ratacapo.txt", image, 0, 7);
+$readmemh("archivo.hex", image);
 
 always @(posedge clk)
 	if (write_enable)
