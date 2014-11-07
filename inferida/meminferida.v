@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module meminferida
 	#(parameter RAM_WIDTH=24,
-		RAM_ADDR_BITS=10)
+		RAM_ADDR_BITS=30)
 	(
 	input wire clk,
 	input wire write_enable,

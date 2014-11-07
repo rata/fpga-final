@@ -42,12 +42,10 @@ reg [9:0] addr_reg = 10'b0;
 reg [9:0] addr_next = 10'b0;
 
 
-//assign write_enable = 1'b0;
-//assign addr = 16'h0;
-assign DI = 24'h00; //8'hed;
+assign DI = 24'h00;
 
-meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) src(.clk(clk), .write_enable(1'b0), .addr(addr_reg), .DI(DI), .DO(DO));
-meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) dst(.clk(clk), .write_enable(1'b1), .addr(addr_reg), .DI(DI_dst), .DO(DO_dst));
+meminferida #(.RAM_ADDR_BITS(30), .RAM_WIDTH(24)) src(.clk(clk), .write_enable(1'b0), .addr(addr_reg), .DI(DI), .DO(DO));
+meminferida #(.RAM_ADDR_BITS(30), .RAM_WIDTH(24)) dst(.clk(clk), .write_enable(1'b1), .addr(addr_reg), .DI(DI_dst), .DO(DO_dst));
 
 bwfilter bw(.pixel(DO), .ret(ret));
 assign DI_dst = {ret, ret, ret};
@@ -104,25 +102,13 @@ wire [3:0] tmp2;
 wire [3:0] tmp3;
 wire [3:0] tmp4;
 
-
 wire [7:0] DO_dst_div3;
 wire [7:0] DO_div3;
 
-//div3 div1(.src(DO), .dst(DO_div3));
-//div3 div2(.src(DO_dst), .dst(DO_dst_div3));
-
 assign tmp =  DO_dst << 20 >> 20;
 assign tmp2 = DO_dst >> 20;
-
 assign tmp3 =  DI_dst << 20 >> 20;
 assign tmp4 = DI_dst >> 20;
-
-//assign tmp3 = addr_reg << 4 >> 4;
-//assign tmp4 = addr_reg >> 4;
-
-//assign tmp = (DO == 24'h060606) ? 4'b1 : 4'b0;
-//contador_digito cont1(.clk(clk), .reset(1'b0), .soft_reset(1'b0), .prev_tick(clk), .max_tick(_clk));
-//contador_n cont2(.clk(clk),  .reset(1'b0), .soft_reset(1'b0), .max_tick(_clk));
 
 hex_to_sseg h2s_1 (.hex(tmp), .dp(1'b0), .sseg(in_sseg_1));
 hex_to_sseg h2s_2 (.hex(tmp2), .dp(1'b0), .sseg(in_sseg_2));
