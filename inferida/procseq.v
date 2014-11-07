@@ -44,7 +44,7 @@ reg [9:0] addr_next = 10'b0;
 
 //assign write_enable = 1'b0;
 //assign addr = 16'h0;
-//assign DI = 24'h00; //8'hed;
+assign DI = 24'h00; //8'hed;
 
 meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) src(.clk(clk), .write_enable(1'b0), .addr(addr_reg), .DI(DI), .DO(DO));
 meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) dst(.clk(clk), .write_enable(1'b1), .addr(addr_reg), .DI(DI_dst), .DO(DO_dst));
@@ -55,7 +55,7 @@ assign DI_dst = {ret, ret, ret};
 
 always @(posedge clk, posedge reset) begin
 	if (reset) begin
-		addr_reg <= 10'b0;
+		addr_reg <= 10'h0;
 		state_reg <= 2'b00;
 	end 
 	else begin
@@ -64,7 +64,7 @@ always @(posedge clk, posedge reset) begin
 	end
 end
 
-always @(posedge clk) begin
+always @* begin
 	addr_next = addr_reg;
 	state_next = state_reg;
    if (addr_next < 3) begin
@@ -79,7 +79,7 @@ always @(posedge clk) begin
 				end
 			2'b10: // write
 				begin
-					state_next = 2'b00;
+					state_next = 2'b11;
 				end
 			2'b11: // next
 				begin
