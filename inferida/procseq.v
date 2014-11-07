@@ -33,20 +33,25 @@ wire [23:0] DO;
 
 wire [23:0] DI_dst;
 wire [23:0] DO_dst;
+wire [7:0] ret;
 
 
 reg [1:0] state_reg;
 reg [1:0] state_next;
-reg [9:0] addr_reg;
-reg [9:0] addr_next;
+reg [9:0] addr_reg = 10'b0;
+reg [9:0] addr_next = 10'b0;
 
 
 //assign write_enable = 1'b0;
 //assign addr = 16'h0;
-assign DI = 24'h00; //8'hed;
+//assign DI = 24'h00; //8'hed;
 
 meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) src(.clk(clk), .write_enable(1'b0), .addr(addr_reg), .DI(DI), .DO(DO));
 meminferida #(.RAM_ADDR_BITS(10), .RAM_WIDTH(24)) dst(.clk(clk), .write_enable(1'b1), .addr(addr_reg), .DI(DI_dst), .DO(DO_dst));
+
+bwfilter bw(.pixel(DO), .ret(ret));
+assign DI_dst = {ret, ret, ret};
+
 
 always @(posedge clk, posedge reset) begin
 	if (reset) begin
@@ -59,17 +64,16 @@ always @(posedge clk, posedge reset) begin
 	end
 end
 
-always @* begin
+always @(posedge clk) begin
 	addr_next = addr_reg;
 	state_next = state_reg;
-   if (addr_next < 2) begin
+   if (addr_next < 3) begin
 	   case (state_reg)
 			2'b00: // read
 				begin
-					addr_next = addr_reg + 1'b1;
 					state_next = 2'b01;
 				end
-			2'b01: // apply filter
+			2'b01: // apply 
 				begin
 					state_next = 2'b10;
 				end
@@ -77,8 +81,11 @@ always @* begin
 				begin
 					state_next = 2'b00;
 				end
-			2'b11:
-				state_next = 2'b00;
+			2'b11: // next
+				begin
+					state_next = 2'b00;
+					addr_next = addr_reg + 1'b1;
+				end
 		endcase
 	end
 	else begin
@@ -87,7 +94,6 @@ always @* begin
 	end
 end
 
-assign DI_dst = DO;
 
 wire [7:0] in_sseg_1;
 wire [7:0] in_sseg_2;
@@ -102,23 +108,19 @@ wire [3:0] tmp4;
 wire [7:0] DO_dst_div3;
 wire [7:0] DO_div3;
 
-div3 div1(.src(DO), .dst(DO_div3));
-div3 div2(.src(DO_dst), .dst(DO_dst_div3));
+//div3 div1(.src(DO), .dst(DO_div3));
+//div3 div2(.src(DO_dst), .dst(DO_dst_div3));
 
-//assign tmp =  DO_div3 << 4 >> 4;
-assign tmp2 = DO_div3 >> 4;
+assign tmp =  DO_dst << 20 >> 20;
+assign tmp2 = DO_dst >> 20;
 
-assign tmp3 =  DO_dst_div3 << 4 >> 4;
-assign tmp4 = DO_dst_div3 >> 4;
+assign tmp3 =  DI_dst << 20 >> 20;
+assign tmp4 = DI_dst >> 20;
 
 //assign tmp3 = addr_reg << 4 >> 4;
 //assign tmp4 = addr_reg >> 4;
 
-wire _clk;
-
-assign tmp = (DO == 24'h060606) ? 4'b1 : 4'b0;
-
-
+//assign tmp = (DO == 24'h060606) ? 4'b1 : 4'b0;
 //contador_digito cont1(.clk(clk), .reset(1'b0), .soft_reset(1'b0), .prev_tick(clk), .max_tick(_clk));
 //contador_n cont2(.clk(clk),  .reset(1'b0), .soft_reset(1'b0), .max_tick(_clk));
 

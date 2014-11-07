@@ -26,7 +26,7 @@ module meminferida
 	input wire write_enable,
 	input wire [RAM_ADDR_BITS-1:0] addr,
 	input wire [RAM_WIDTH-1:0] DI,
-	output wire [RAM_WIDTH-1:0] DO	
+	output reg [RAM_WIDTH-1:0] DO	
 ); 
 
 reg [RAM_WIDTH-1:0] image [(2**RAM_ADDR_BITS)-1:0];
@@ -39,10 +39,12 @@ initial
 $readmemh("archivo.hex", image);
 
 always @(posedge clk)
-	if (write_enable)
+	if (write_enable) begin
 		image[addr] <= DI;
+		DO <= DI;
+	end else begin
+		DO <= image[addr];
+	end
 
-
-assign DO = image[addr];
 
 endmodule

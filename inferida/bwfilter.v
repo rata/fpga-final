@@ -23,6 +23,17 @@ module bwfilter(
 	output [7:0] ret
 );
 
+wire [7:0] red;
+wire [7:0] green;
+wire [7:0] blue;
+wire [9:0] sum;
 
+assign red   = (pixel & 24'hFF0000) >> 16;
+assign green = (pixel & 24'h00FF00) << 8 >> 16;
+assign blue  = (pixel & 24'h0000FF) << 16 >> 16;
+assign sum = red + green + blue;
+
+div3 div1(.src(sum), .dst(ret));
 
 endmodule
+
