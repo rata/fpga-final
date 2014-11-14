@@ -44,8 +44,12 @@ reg [9:0] addr_next = 10'b0;
 
 assign DI = 24'h00;
 
-meminferida #(.RAM_ADDR_BITS(30), .RAM_WIDTH(24)) src(.clk(clk), .write_enable(1'b0), .addr(addr_reg), .DI(DI), .DO(DO));
-meminferida #(.RAM_ADDR_BITS(30), .RAM_WIDTH(24)) dst(.clk(clk), .write_enable(1'b1), .addr(addr_reg), .DI(DI_dst), .DO(DO_dst));
+
+// Source tiene que ser de 15 bits y dst de 13
+meminferida #(.RAM_ADDR_BITS(13), .RAM_WIDTH(24)) src(.clk(clk), .write_enable(1'b0), .addr(addr_reg), .DI(DI), .DO(DO));
+// TODO : El ram_width TIENE que ser de 8 bits
+meminferida #(.RAM_ADDR_BITS(15), .RAM_WIDTH(24)) dst(.clk(clk), .write_enable(1'b1), .addr(addr_reg), .DI(DI_dst), .DO(DO_dst));
+
 
 bwfilter bw(.pixel(DO), .ret(ret));
 assign DI_dst = {ret, ret, ret};

@@ -1,33 +1,8 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Fri Oct 24 12:53:44 2014
+Fri Nov 14 12:13:45 2014
 
 drc -z main.ncd main.pcf
 
-WARNING:PhysDesignRules:367 - The signal <N258/mem/Mram_image1/F7.A> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N258/mem/Mram_image1/C> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N258/mem/Mram_image1/A> is incomplete.
-   The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N2306/mem/Mram_image1025/C> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N2306/mem/Mram_image1025/A> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N2306/mem/Mram_image1025/F7.A> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N770/mem/Mram_image257/C> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N770/mem/Mram_image257/F7.A> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N770/mem/Mram_image257/A> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N1282/mem/Mram_image513/F7.A> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N1282/mem/Mram_image513/C> is
-   incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal <N1282/mem/Mram_image513/A> is
-   incomplete. The signal does not drive any load pins in the design.
-DRC detected 0 errors and 12 warnings.  Please see the previously displayed
-individual error or warning messages for more details.
+DRC detected 0 errors and 0 warnings.

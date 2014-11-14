@@ -5,7 +5,7 @@ Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
 ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 main.ngc
 main.ngd
 
-Reading NGO file "/home/rcampos/fpga/git/fpga-final/inferida/main.ngc" ...
+Reading NGO file "/home/itirabasso/filtro/inferida/main.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -27,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 402880 kilobytes
+Total memory usage is 403000 kilobytes
 
 Writing NGD file "main.ngd" ...
-Total REAL time to NGDBUILD completion:  3 sec
+Total REAL time to NGDBUILD completion:  2 sec
 Total CPU time to NGDBUILD completion:   2 sec
 
 Writing NGDBUILD log file "main.bld"...
