@@ -1,0 +1,5 @@
+test basico de la uart (carpeta uart):
+	miniterm.py -b 19200 -p /dev/ttyUSB0 -e
+
+Por las dudas, no esta de mas correrlo **despues** de que se programo la FPGA,
+asi estamos seguros de que ttyUSB<N> usar
