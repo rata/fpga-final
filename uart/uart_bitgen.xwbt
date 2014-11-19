@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/rcampos/fpga/git/fpga-final/uart/uart.ncd
+OUTFILE=/home/rcampos/fpga/git/fpga-final/uart/uart.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=/home/rcampos/fpga/git/fpga-final/uart
+LICENSE=WebPack
+USER_INFO=175494804_177428606_0_124
