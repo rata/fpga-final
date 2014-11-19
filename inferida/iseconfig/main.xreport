@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-14T12:08:15</DateModified>
+  <DateModified>2014-11-19T12:37:41</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>2014-11-14T11:31:06</SummaryTimeStamp>
-  <SavedFilePath>/home/itirabasso/filtro/inferida/iseconfig/main.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/itirabasso/filtro/inferida/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/rcampos/fpga/git/fpga-final/inferida/iseconfig/main.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/rcampos/fpga/git/fpga-final/inferida/</ImplementationReportsDirectory>
   <DateInitialized>2014-10-24T11:22:02</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

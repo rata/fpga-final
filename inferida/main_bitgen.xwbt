@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/itirabasso/filtro/inferida/main.ncd
-OUTFILE=/home/itirabasso/filtro/inferida/main.bit
+INFILE=/home/rcampos/fpga/git/fpga-final/inferida/main.ncd
+OUTFILE=/home/rcampos/fpga/git/fpga-final/inferida/main.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=/home/itirabasso/filtro/inferida
+WORKINGDIR=/home/rcampos/fpga/git/fpga-final/inferida
 LICENSE=WebPack
 USER_INFO=175494804_177428606_0_124
