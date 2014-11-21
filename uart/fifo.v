@@ -51,8 +51,8 @@ module fifo
    always @*
    begin
       // successive pointer values
-      w_ptr_succ = w_ptr_reg + 1;
-      r_ptr_succ = r_ptr_reg + 1;
+      w_ptr_succ = w_ptr_reg + 1'b1;
+      r_ptr_succ = r_ptr_reg + 1'b1;
       // default: keep old values
       w_ptr_next = w_ptr_reg;
       r_ptr_next = r_ptr_reg;
