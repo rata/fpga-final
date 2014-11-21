@@ -21,10 +21,10 @@
 module main(
 	input clk,
 	input sw,
-   output [3:0] an,
-   output [7:0] sseg
+	input wire rx,
+   output wire tx
 );
 
-procseq proc(.clk(clk), .reset(sw), .an(an), .sseg(sseg));
+procseq proc(.clk(clk), .reset(sw), .rx(rx), .tx(tx));
 
 endmodule

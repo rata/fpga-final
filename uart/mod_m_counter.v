@@ -23,7 +23,7 @@ module mod_m_counter
          r_reg <= r_next;
 
    // next-state logic
-   assign r_next = (r_reg==(M-1)) ? 0 : r_reg + 1'b1;
+   assign r_next = (r_reg==(M-1)) ? 0 : r_reg + 1;
    // output logic
    assign q = r_reg;
    assign max_tick = (r_reg==(M-1)) ? 1'b1 : 1'b0;

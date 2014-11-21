@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Wed Nov 19 12:26:20 2014
+Fri Nov 21 11:09:44 2014
 
 drc -z uart_test.ncd uart_test.pcf
 

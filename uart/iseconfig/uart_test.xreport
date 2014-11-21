@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-19T12:41:43</DateModified>
+  <DateModified>2014-11-21T11:46:28</DateModified>
   <ModuleName>uart_test</ModuleName>
   <SummaryTimeStamp>2014-11-14T11:58:15</SummaryTimeStamp>
   <SavedFilePath>/home/rcampos/fpga/git/fpga-final/uart/iseconfig/uart_test.xreport</SavedFilePath>

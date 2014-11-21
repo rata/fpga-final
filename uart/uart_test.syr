@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: uart_test.prj
@@ -135,25 +135,14 @@ Elaborating module <mod_m_counter(M=326,N=9)>.
 WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/mod_m_counter.v" Line 26: Result of 32-bit expression is truncated to fit in 9-bit target.
 
 Elaborating module <uart_rx(DBIT=8,SB_TICK=16)>.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_rx.v" Line 69: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_rx.v" Line 79: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_rx.v" Line 82: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_rx.v" Line 91: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <fifo(B=8,W=2)>.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/fifo.v" Line 54: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/fifo.v" Line 55: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <uart_tx(DBIT=8,SB_TICK=16)>.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_tx.v" Line 80: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_tx.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_tx.v" Line 96: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_tx.v" Line 108: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <debounce>.
 WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/debounce.v" Line 58: Result of 32-bit expression is truncated to fit in 21-bit target.
 WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/debounce.v" Line 82: Result of 32-bit expression is truncated to fit in 21-bit target.
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_test.v" Line 28: Result of 9-bit expression is truncated to fit in 8-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -162,9 +151,8 @@ WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/uart/uart_test.v" L
 Synthesizing Unit <uart_test>.
     Related source file is "/home/rcampos/fpga/git/fpga-final/uart/uart_test.v".
 INFO:Xst:3210 - "/home/rcampos/fpga/git/fpga-final/uart/uart_test.v" line 24: Output port <db_level> of the instance <btn_db_unit> is unconnected or connected to loadless signal.
-    Found 8-bit adder for signal <rec_data1> created at line 28.
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	no macro.
 Unit <uart_test> synthesized.
 
 Synthesizing Unit <uart>.
@@ -307,13 +295,12 @@ HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 2
  4x8-bit dual-port RAM                                 : 2
-# Adders/Subtractors                                   : 11
+# Adders/Subtractors                                   : 10
  10-bit adder                                          : 1
  2-bit adder                                           : 4
  21-bit subtractor                                     : 1
  3-bit adder                                           : 2
  4-bit adder                                           : 2
- 8-bit adder                                           : 1
 # Registers                                            : 17
  1-bit register                                        : 5
  2-bit register                                        : 4
@@ -341,6 +328,8 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1710 - FF/Latch <r_ptr_reg_0> (without init value) has a constant value of 0 in block <fifo_rx_unit>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <r_ptr_reg_1> (without init value) has a constant value of 0 in block <fifo_rx_unit>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <fifo>.
 The following registers are absorbed into counter <r_ptr_reg>: 1 register on signal <r_ptr_reg>.
@@ -377,12 +366,11 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # RAMs                                                 : 2
  4x8-bit dual-port distributed RAM                     : 2
-# Adders/Subtractors                                   : 9
+# Adders/Subtractors                                   : 8
  10-bit adder                                          : 1
  2-bit adder                                           : 4
  21-bit subtractor                                     : 1
  4-bit adder                                           : 2
- 8-bit adder                                           : 1
 # Counters                                             : 6
  2-bit up counter                                      : 4
  3-bit up counter                                      : 2
@@ -438,19 +426,22 @@ Optimizing FSM <btn_db_unit/FSM_2> on signal <state_reg[1:2]> with gray encoding
 
 Optimizing unit <uart_test> ...
 
-Optimizing unit <fifo> ...
-
 Optimizing unit <mod_m_counter> ...
 
 Optimizing unit <uart_rx> ...
 
+Optimizing unit <fifo> ...
+
 Optimizing unit <uart_tx> ...
 
 Optimizing unit <debounce> ...
+WARNING:Xst:1710 - FF/Latch <uart_unit/fifo_rx_unit/r_ptr_reg_1> (without init value) has a constant value of 0 in block <uart_test>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <uart_unit/fifo_rx_unit/r_ptr_reg_0> (without init value) has a constant value of 0 in block <uart_test>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2399 - RAMs <uart_unit/fifo_tx_unit/Mram_array_reg22>, <uart_unit/fifo_tx_unit/Mram_array_reg21> are equivalent, second RAM is removed
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block uart_test, actual ratio is 2.
+Found area constraint ratio of 100 (+ 5) on block uart_test, actual ratio is 1.
 
 Final Macro Processing ...
 
@@ -458,8 +449,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 79
- Flip-Flops                                            : 79
+# Registers                                            : 77
+ Flip-Flops                                            : 77
 
 =========================================================================
 
@@ -482,25 +473,26 @@ Top Level Output File Name         : uart_test.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 210
+# BELS                             : 186
 #      GND                         : 1
-#      INV                         : 24
+#      INV                         : 23
 #      LUT1                        : 1
-#      LUT2                        : 10
-#      LUT3                        : 24
-#      LUT4                        : 23
-#      LUT5                        : 37
-#      LUT6                        : 46
+#      LUT2                        : 8
+#      LUT3                        : 18
+#      LUT4                        : 19
+#      LUT5                        : 36
+#      LUT6                        : 36
 #      MUXCY                       : 20
 #      MUXF7                       : 2
 #      VCC                         : 1
 #      XORCY                       : 21
-# FlipFlops/Latches                : 79
-#      FDC                         : 48
-#      FDCE                        : 28
-#      FDP                         : 3
-# RAMS                             : 6
-#      RAM16X1D                    : 4
+# FlipFlops/Latches                : 77
+#      FDC                         : 47
+#      FDCE                        : 27
+#      FDP                         : 2
+#      FDPE                        : 1
+# RAMS                             : 5
+#      RAM16X1D                    : 3
 #      RAM32M                      : 2
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
@@ -515,18 +507,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              79  out of  18224     0%  
- Number of Slice LUTs:                  181  out of   9112     1%  
-    Number used as Logic:               165  out of   9112     1%  
-    Number used as Memory:               16  out of   2176     0%  
-       Number used as RAM:               16
+ Number of Slice Registers:              77  out of  18224     0%  
+ Number of Slice LUTs:                  155  out of   9112     1%  
+    Number used as Logic:               141  out of   9112     1%  
+    Number used as Memory:               14  out of   2176     0%  
+       Number used as RAM:               14
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    187
-   Number with an unused Flip Flop:     108  out of    187    57%  
-   Number with an unused LUT:             6  out of    187     3%  
-   Number of fully used LUT-FF pairs:    73  out of    187    39%  
-   Number of unique control sets:         8
+ Number of LUT Flip Flop pairs used:    161
+   Number with an unused Flip Flop:      84  out of    161    52%  
+   Number with an unused LUT:             6  out of    161     3%  
+   Number of fully used LUT-FF pairs:    71  out of    161    44%  
+   Number of unique control sets:         7
 
 IO Utilization: 
  Number of IOs:                          25
@@ -556,7 +548,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 85    |
+clk                                | BUFGP                  | 82    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -567,9 +559,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.129ns (Maximum Frequency: 194.968MHz)
-   Minimum input arrival time before clock: 5.586ns
-   Maximum output required time after clock: 4.702ns
+   Minimum period: 5.057ns (Maximum Frequency: 197.730MHz)
+   Minimum input arrival time before clock: 5.739ns
+   Maximum output required time after clock: 4.576ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -578,16 +570,16 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.129ns (frequency: 194.968MHz)
-  Total number of paths / destination ports: 5172 / 147
+  Clock period: 5.057ns (frequency: 197.730MHz)
+  Total number of paths / destination ports: 3473 / 128
 -------------------------------------------------------------------------
-Delay:               5.129ns (Levels of Logic = 6)
+Delay:               5.057ns (Levels of Logic = 7)
   Source:            btn_db_unit/q_reg_0 (FF)
-  Destination:       uart_unit/fifo_tx_unit/Mram_array_reg22 (RAM)
+  Destination:       uart_unit/fifo_tx_unit/empty_reg (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: btn_db_unit/q_reg_0 to uart_unit/fifo_tx_unit/Mram_array_reg22
+  Data Path: btn_db_unit/q_reg_0 to uart_unit/fifo_tx_unit/empty_reg
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -595,56 +587,58 @@ Delay:               5.129ns (Levels of Logic = 6)
      LUT1:I0->O            1   0.205   0.000  btn_db_unit/Msub__n0040_cy<0>_rt (btn_db_unit/Msub__n0040_cy<0>_rt)
      MUXCY:S->O            1   0.172   0.000  btn_db_unit/Msub__n0040_cy<0> (btn_db_unit/Msub__n0040_cy<0>)
      MUXCY:CI->O           1   0.019   0.000  btn_db_unit/Msub__n0040_cy<1> (btn_db_unit/Msub__n0040_cy<1>)
-     XORCY:CI->O           3   0.180   1.015  btn_db_unit/Msub__n0040_xor<2> (btn_db_unit/_n0040<18>)
-     LUT6:I0->O           11   0.203   1.111  btn_db_unit/db_tick22 (btn_db_unit/db_tick21)
-     LUT6:I3->O            3   0.205   0.650  uart_unit/fifo_tx_unit/wr_en1 (uart_unit/fifo_tx_unit/wr_en)
-     RAM32M:WE                 0.304          uart_unit/fifo_tx_unit/Mram_array_reg1
+     XORCY:CI->O           2   0.180   0.981  btn_db_unit/Msub__n0040_xor<2> (btn_db_unit/_n0040<18>)
+     LUT6:I0->O            7   0.203   1.002  btn_db_unit/db_tick22 (btn_db_unit/db_tick21)
+     LUT6:I3->O            2   0.205   0.721  btn_db_unit/db_tick25 (btn_db_unit/db_tick_bdd2)
+     LUT6:I4->O            1   0.203   0.000  uart_unit/fifo_tx_unit/full_reg_rstpot (uart_unit/fifo_tx_unit/full_reg_rstpot)
+     FDC:D                     0.102          uart_unit/fifo_tx_unit/full_reg
     ----------------------------------------
-    Total                      5.129ns (1.735ns logic, 3.394ns route)
-                                       (33.8% logic, 66.2% route)
+    Total                      5.057ns (1.736ns logic, 3.321ns route)
+                                       (34.3% logic, 65.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 125 / 123
+  Total number of paths / destination ports: 116 / 114
 -------------------------------------------------------------------------
-Offset:              5.586ns (Levels of Logic = 5)
+Offset:              5.739ns (Levels of Logic = 6)
   Source:            btn (PAD)
-  Destination:       uart_unit/fifo_rx_unit/empty_reg (FF)
+  Destination:       uart_unit/fifo_tx_unit/r_ptr_reg_1 (FF)
   Destination Clock: clk rising
 
-  Data Path: btn to uart_unit/fifo_rx_unit/empty_reg
+  Data Path: btn to uart_unit/fifo_tx_unit/r_ptr_reg_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            35   1.222   1.563  btn_IBUF (btn_IBUF)
-     LUT3:I0->O            1   0.205   0.580  btn_db_unit/db_tick1_SW2 (N26)
-     LUT6:I5->O            2   0.205   0.721  btn_db_unit/db_tick21_SW0 (N68)
-     LUT6:I4->O            1   0.203   0.580  btn_db_unit/db_tick25_SW6 (N58)
-     LUT6:I5->O            1   0.205   0.000  uart_unit/fifo_rx_unit/empty_reg_rstpot (uart_unit/fifo_rx_unit/empty_reg_rstpot)
-     FDP:D                     0.102          uart_unit/fifo_rx_unit/empty_reg
+     IBUF:I->O            32   1.222   1.396  btn_IBUF (btn_IBUF)
+     LUT2:I0->O            1   0.203   0.684  uart_unit/fifo_tx_unit/_n0071_inv1_rstpot_SW0 (N26)
+     LUT6:I4->O            1   0.203   0.000  btn_db_unit/db_tick25_SW5_F (N61)
+     MUXF7:I0->O           1   0.131   0.808  btn_db_unit/db_tick25_SW5 (N50)
+     LUT6:I3->O            1   0.205   0.580  uart_unit/fifo_tx_unit/r_ptr_reg_1_dpot (uart_unit/fifo_tx_unit/r_ptr_reg_1_dpot)
+     LUT5:I4->O            1   0.205   0.000  uart_unit/fifo_tx_unit/r_ptr_reg_1_dpot1 (uart_unit/fifo_tx_unit/r_ptr_reg_1_dpot1)
+     FDCE:D                    0.102          uart_unit/fifo_tx_unit/r_ptr_reg_1
     ----------------------------------------
-    Total                      5.586ns (2.142ns logic, 3.444ns route)
-                                       (38.3% logic, 61.7% route)
+    Total                      5.739ns (2.271ns logic, 3.468ns route)
+                                       (39.6% logic, 60.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 15 / 11
+  Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
-Offset:              4.702ns (Levels of Logic = 2)
-  Source:            uart_unit/fifo_rx_unit/r_ptr_reg_0 (FF)
-  Destination:       led<6> (PAD)
+Offset:              4.576ns (Levels of Logic = 2)
+  Source:            uart_unit/fifo_tx_unit/full_reg (FF)
+  Destination:       sseg<6> (PAD)
   Source Clock:      clk rising
 
-  Data Path: uart_unit/fifo_rx_unit/r_ptr_reg_0 to led<6>
+  Data Path: uart_unit/fifo_tx_unit/full_reg to sseg<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             9   0.447   0.829  uart_unit/fifo_rx_unit/r_ptr_reg_0 (uart_unit/fifo_rx_unit/r_ptr_reg_0)
-     RAM16X1D:DPRA0->DPO    3   0.205   0.650  uart_unit/fifo_rx_unit/Mram_array_reg21 (Madd_rec_data1_lut<6>)
-     OBUF:I->O                 2.571          led_6_OBUF (led<6>)
+     FDC:C->Q              7   0.447   0.773  uart_unit/fifo_tx_unit/full_reg (uart_unit/fifo_tx_unit/full_reg)
+     INV:I->O              1   0.206   0.579  sseg<6>1_INV_0 (sseg_6_OBUF)
+     OBUF:I->O                 2.571          sseg_6_OBUF (sseg<6>)
     ----------------------------------------
-    Total                      4.702ns (3.223ns logic, 1.479ns route)
-                                       (68.5% logic, 31.5% route)
+    Total                      4.576ns (3.224ns logic, 1.351ns route)
+                                       (70.5% logic, 29.5% route)
 
 =========================================================================
 
@@ -656,21 +650,21 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.129|         |         |         |
+clk            |    5.057|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.02 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.82 secs
  
 --> 
 
 
-Total memory usage is 390656 kilobytes
+Total memory usage is 390644 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   14 (   0 filtered)
-Number of infos    :    4 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

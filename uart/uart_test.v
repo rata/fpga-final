@@ -16,7 +16,7 @@ module uart_test
    // body
    // instantiate uart
    uart uart_unit
-      (.clk(clk), .reset(reset), .rd_uart(btn_tick),
+      (.clk(clk), .reset(reset), .rd_uart(1'b0),
        .wr_uart(btn_tick), .rx(rx), .w_data(rec_data1),
        .tx_full(tx_full), .rx_empty(rx_empty),
        .r_data(rec_data), .tx(tx));
@@ -25,7 +25,8 @@ module uart_test
       (.clk(clk), .reset(reset), .sw(btn),
        .db_level(), .db_tick(btn_tick));
    // incremented data loops back
-   assign rec_data1 = rec_data + 1'b1;
+   //assign rec_data1 = rec_data + 1'b1;
+	assign rec_data1 = 8'h33;
    // LED display
    assign led = rec_data;
    assign an = 4'b1110;

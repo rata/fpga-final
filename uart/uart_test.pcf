@@ -1,11 +1,8 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 19 12:26:05 2014
+// Written by: Map P.20131013 on Fri Nov 21 11:09:29 2014
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
-COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
-COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
 COMP "led<0>" LOCATE = SITE "U16" LEVEL 1;
 COMP "an<3>" LOCATE = SITE "P17" LEVEL 1;
 COMP "led<1>" LOCATE = SITE "V16" LEVEL 1;
@@ -28,5 +25,8 @@ COMP "sseg<5>" LOCATE = SITE "N14" LEVEL 1;
 COMP "sseg<6>" LOCATE = SITE "L14" LEVEL 1;
 COMP "sseg<7>" LOCATE = SITE "M13" LEVEL 1;
 COMP "reset" LOCATE = SITE "A8" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
 SCHEMATIC END;
 

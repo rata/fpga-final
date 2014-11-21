@@ -8,9 +8,8 @@
 <msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">uart_unit/fifo_tx_unit/Mram_array_reg22/SPO</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">3</arg> more times for the following (max. 5 shown):
-<arg fmt="%s" index="3">uart_unit/fifo_tx_unit/Mram_array_reg21/SPO,
-uart_unit/fifo_rx_unit/Mram_array_reg22/SPO,
+<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">2</arg> more times for the following (max. 5 shown):
+<arg fmt="%s" index="3">uart_unit/fifo_rx_unit/Mram_array_reg22/SPO,
 uart_unit/fifo_rx_unit/Mram_array_reg21/SPO</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>

@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-19T12:37:41</DateModified>
+  <DateModified>2014-11-21T12:27:54</DateModified>
   <ModuleName>main</ModuleName>
   <SummaryTimeStamp>2014-11-14T11:31:06</SummaryTimeStamp>
   <SavedFilePath>/home/rcampos/fpga/git/fpga-final/inferida/iseconfig/main.xreport</SavedFilePath>

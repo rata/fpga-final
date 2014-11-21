@@ -21,10 +21,12 @@ else:
 #ser = serial.Serial(dev, 19200, timeout=10)
 ser = serial.Serial(dev, 19200)
 
-ser.write("5")
+#ser.write("5")
 byte = ser.read()
+
 print "printing byte in next line"
 print byte
+print ord(byte)
 
 
 ser.close()
