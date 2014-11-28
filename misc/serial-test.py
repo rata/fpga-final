@@ -19,14 +19,17 @@ else:
 	dev = sys.argv[1]
 
 #ser = serial.Serial(dev, 19200, timeout=10)
-ser = serial.Serial(dev, 19200)
+ser = serial.Serial(dev, 19200, parity='N', rtscts=False, xonxoff=False)
 
-#ser.write("5")
-byte = ser.read()
-
-print "printing byte in next line"
-print byte
-print ord(byte)
-
+while True:
+	#ser.write("5")
+	byte = ser.read(1)
+	
+	
+	#print ord(byte)
+	sys.stdout.write("imprimiendo: ")
+	sys.stdout.write(byte)
+	sys.stdout.write("\n")
+	#print byte, ord(byte), repr(byte), chr(int(byte))
 
 ser.close()
