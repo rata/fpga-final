@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 import sys
+import Image
 
 fin  = open(sys.argv[1], 'rb')
 fout  = open(sys.argv[2], 'wb')
