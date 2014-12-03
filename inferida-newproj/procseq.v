@@ -70,6 +70,6 @@ always @(posedge clk, posedge reset) begin
 	end
 end
 
-assign addr_next = (addr_reg < 13'd6766) ? addr_reg + 1'b1 : 0;
+assign addr_next = (addr_reg < 13'd8192) ? addr_reg + 1'b1 : 0;
 
 endmodule
