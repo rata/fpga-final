@@ -22,14 +22,13 @@ x_pxs = range(fin.size[0])
 for y in y_pxs:
     for x in x_pxs:
 	buf1, buf2, buf3 = pixels[x, y]
-	print "buf1", buf1
-	print "buf2", buf2
-	print "buf3", buf3
+	#print "buf1", buf1
+	#print "buf2", buf2
+	#print "buf3", buf3
 	buf1_ascii = to_ascii_hex(buf1)
 	buf2_ascii = to_ascii_hex(buf2)
 	buf3_ascii = to_ascii_hex(buf3)
-	print "buf1_ascii es:", buf1_ascii
-	print "buf2_ascii es:", buf2_ascii
-	print "buf3_ascii es:", buf3_ascii
-	#print "nosotros nos quedamos con", to_ascii
+	#print "buf1_ascii es:", buf1_ascii
+	#print "buf2_ascii es:", buf2_ascii
+	#print "buf3_ascii es:", buf3_ascii
 	fout.write(buf1_ascii + buf2_ascii + buf3_ascii + '\n')
