@@ -38,7 +38,7 @@ module uart
        .empty(rx_empty), .full(), .r_data(r_data));
 
 	// TODO: .W deberia ser 13 bits!
-   fifo #(.B(DBIT), .W(10)) fifo_tx_unit
+   fifo #(.B(DBIT), .W(13)) fifo_tx_unit
       (.clk(clk), .reset(reset), .rd(tx_done_tick),
        .wr(wr_uart), .w_data(w_data), .empty(tx_empty),
        .full(tx_full), .r_data(tx_fifo_out));

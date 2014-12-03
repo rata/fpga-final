@@ -33,7 +33,10 @@ assign green = (pixel & 24'h00FF00) << 8 >> 16;
 assign blue  = (pixel & 24'h0000FF) << 16 >> 16;
 assign sum = red + green + blue;
 
-div3 div1(.src(sum), .dst(ret));
+wire [7:0] hack_ret;
+div3 div1(.src(sum), .dst(hack_ret));
+
+assign ret = (hack_ret == 0)? 8'h1: hack_ret;
 
 endmodule
 

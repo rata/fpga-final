@@ -36,7 +36,7 @@ reg [RAM_WIDTH-1:0] image [(2**RAM_ADDR_BITS)-1:0];
  *	para mas info
 */
 initial
-$readmemh("archivo.hex", image);
+$readmemh("gioconda.hex", image);
 
 always @(posedge clk)
 	if (write_enable) begin
