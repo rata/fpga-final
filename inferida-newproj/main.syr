@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: main.prj
@@ -140,7 +140,7 @@ Elaborating module <procseq>.
 Elaborating module <meminferida(RAM_ADDR_BITS=13,RAM_WIDTH=24)>.
 Reading initialization file \"gioconda.hex\".
 WARNING:HDLCompiler:1670 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/meminferida.v" Line 39: Signal <image> in initial block is partially initialized.
-WARNING:HDLCompiler:1127 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 57: Assignment to dummy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 48: Assignment to dummy ignored, since the identifier is never used
 
 Elaborating module <uart>.
 
@@ -154,14 +154,13 @@ Elaborating module <fifo(B=8,W=2)>.
 Elaborating module <fifo(B=8,W=13)>.
 
 Elaborating module <uart_tx(DBIT=8,SB_TICK=16)>.
-WARNING:HDLCompiler:1127 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 68: Assignment to tx_full ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 69: Assignment to dummy ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 55: Assignment to tx_full ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 56: Assignment to dummy ignored, since the identifier is never used
 
 Elaborating module <bwfilter>.
 
 Elaborating module <div3>.
-WARNING:HDLCompiler:1127 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 77: Assignment to state_reg ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 92: Result of 32-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" Line 73: Result of 32-bit expression is truncated to fit in 13-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -176,12 +175,12 @@ Unit <main> synthesized.
 Synthesizing Unit <procseq>.
     Related source file is "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v".
         ADDR_BITS = 13
-INFO:Xst:3210 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" line 64: Output port <r_data> of the instance <uart_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" line 64: Output port <tx_full> of the instance <uart_unit> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" line 64: Output port <rx_empty> of the instance <uart_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" line 52: Output port <r_data> of the instance <uart_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" line 52: Output port <tx_full> of the instance <uart_unit> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/rcampos/fpga/git/fpga-final/inferida-newproj/procseq.v" line 52: Output port <rx_empty> of the instance <uart_unit> is unconnected or connected to loadless signal.
     Found 13-bit register for signal <addr_reg>.
-    Found 14-bit adder for signal <n0014[13:0]> created at line 92.
-    Found 13-bit comparator greater for signal <addr_reg[12]_PWR_2_o_LessThan_6_o> created at line 92
+    Found 14-bit adder for signal <n0014[13:0]> created at line 73.
+    Found 13-bit comparator greater for signal <addr_reg[12]_PWR_2_o_LessThan_4_o> created at line 73
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  13 D-type flip-flop(s).
@@ -544,6 +543,7 @@ Optimizing unit <uart_rx> ...
 Optimizing unit <fifo_1> ...
 
 Optimizing unit <uart_tx> ...
+INFO:Xst:2261 - The FF/Latch <proc/addr_reg_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <proc/uart_unit/baud_gen_unit/r_reg_0> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -555,8 +555,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 68
- Flip-Flops                                            : 68
+# Registers                                            : 67
+ Flip-Flops                                            : 67
 
 =========================================================================
 
@@ -579,21 +579,21 @@ Top Level Output File Name         : main.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 743
+# BELS                             : 741
 #      GND                         : 1
-#      INV                         : 5
+#      INV                         : 4
 #      LUT1                        : 48
-#      LUT2                        : 28
+#      LUT2                        : 14
 #      LUT3                        : 30
-#      LUT4                        : 7
+#      LUT4                        : 20
 #      LUT5                        : 6
 #      LUT6                        : 488
 #      MUXCY                       : 61
 #      MUXF7                       : 8
 #      VCC                         : 1
 #      XORCY                       : 60
-# FlipFlops/Latches                : 68
-#      FDC                         : 28
+# FlipFlops/Latches                : 67
+#      FDC                         : 27
 #      FDCE                        : 38
 #      FDP                         : 1
 #      FDPE                        : 1
@@ -616,17 +616,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              68  out of  18224     0%  
- Number of Slice LUTs:                 2148  out of   9112    23%  
-    Number used as Logic:               612  out of   9112     6%  
+ Number of Slice Registers:              67  out of  18224     0%  
+ Number of Slice LUTs:                 2146  out of   9112    23%  
+    Number used as Logic:               610  out of   9112     6%  
     Number used as Memory:             1536  out of   2176    70%  
        Number used as RAM:             1536
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   2161
-   Number with an unused Flip Flop:    2093  out of   2161    96%  
-   Number with an unused LUT:            13  out of   2161     0%  
-   Number of fully used LUT-FF pairs:    55  out of   2161     2%  
+ Number of LUT Flip Flop pairs used:   2159
+   Number with an unused Flip Flop:    2092  out of   2159    96%  
+   Number with an unused LUT:            13  out of   2159     0%  
+   Number of fully used LUT-FF pairs:    54  out of   2159     2%  
    Number of unique control sets:         7
 
 IO Utilization: 
@@ -660,7 +660,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 592   |
+clk                                | BUFGP                  | 591   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -672,7 +672,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 12.811ns (Maximum Frequency: 78.057MHz)
-   Minimum input arrival time before clock: 3.318ns
+   Minimum input arrival time before clock: 3.311ns
    Maximum output required time after clock: 3.597ns
    Maximum combinational path delay: No path found
 
@@ -683,7 +683,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 12.811ns (frequency: 78.057MHz)
-  Total number of paths / destination ports: 266979 / 6405
+  Total number of paths / destination ports: 266991 / 6404
 -------------------------------------------------------------------------
 Delay:               12.811ns (Levels of Logic = 12)
   Source:            proc/src/Mram_image9 (RAM)
@@ -715,9 +715,9 @@ Delay:               12.811ns (Levels of Logic = 12)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 68 / 68
+  Total number of paths / destination ports: 67 / 67
 -------------------------------------------------------------------------
-Offset:              3.318ns (Levels of Logic = 1)
+Offset:              3.311ns (Levels of Logic = 1)
   Source:            sw (PAD)
   Destination:       proc/addr_reg_12 (FF)
   Destination Clock: clk rising
@@ -726,11 +726,11 @@ Offset:              3.318ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            68   1.222   1.666  sw_IBUF (sw_IBUF)
+     IBUF:I->O            67   1.222   1.659  sw_IBUF (sw_IBUF)
      FDC:CLR                   0.430          proc/addr_reg_0
     ----------------------------------------
-    Total                      3.318ns (1.652ns logic, 1.666ns route)
-                                       (49.8% logic, 50.2% route)
+    Total                      3.311ns (1.652ns logic, 1.659ns route)
+                                       (49.9% logic, 50.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -767,15 +767,15 @@ clk            |   12.811|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 15.00 secs
-Total CPU time to Xst completion: 12.78 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.35 secs
  
 --> 
 
 
-Total memory usage is 413700 kilobytes
+Total memory usage is 413916 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   13 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 
