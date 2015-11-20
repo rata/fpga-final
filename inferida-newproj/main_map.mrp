@@ -12,8 +12,10 @@ Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
 Mapped Date    : Fri Dec  5 11:21:46 2014
 
-Interim Summary
----------------
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:  256
 Slice Logic Utilization:
   Number of Slice Registers:                    68 out of  18,224    1%
     Number used as Flip Flops:                  67
@@ -39,11 +41,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
+  Number of occupied Slices:                   677 out of   2,278   29%
   Number of MUXCYs used:                        80 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:        2,119
-    Number with an unused Flip Flop:         2,065 out of   2,119   97%
-    Number with an unused LUT:                   2 out of   2,119    1%
-    Number of fully used LUT-FF pairs:          52 out of   2,119    2%
+  Number of LUT Flip Flop pairs used:        2,118
+    Number with an unused Flip Flop:         2,064 out of   2,118   97%
+    Number with an unused LUT:                   1 out of   2,118    1%
+    Number of fully used LUT-FF pairs:          53 out of   2,118    2%
     Number of unique control sets:             135
     Number of slice register sites lost
       to control set restrictions:             541 out of  18,224    2%
@@ -83,3 +86,897 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
+Average Fanout of Non-Clock Nets:                7.15
+
+Peak Memory Usage:  746 MB
+Total REAL time to MAP completion:  1 mins 5 secs 
+Total CPU time to MAP completion:   1 mins 2 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg144_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg5_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg32_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg151_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg153_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg150_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg66_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg67_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg143_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg24_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg29_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg159_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg154_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg156_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg157_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg206_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg139_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg141_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg28_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg142_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg31_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg68_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg19_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg155_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg158_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg160_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg152_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg176_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg149_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg174_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg164_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg173_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg161_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg136_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg194_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg137_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg138_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg201_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg200_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg197_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg27_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg148_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg16_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg56_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg53_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg177_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg146_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg175_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg182_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg96_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg172_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg171_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg170_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg163_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg113_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg105_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg169_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg108_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg195_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg129_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg132_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg90_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg221_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg204_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg213_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg76_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg207_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg140_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg203_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg92_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg134_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg25_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg75_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg26_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg13_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg9_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg21_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg65_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg15_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg78_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg17_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg22_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg47_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg18_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg48_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg43_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg126_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg168_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg236_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg162_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg165_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg167_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg107_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg189_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg227_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg234_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg106_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg104_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg166_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg111_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg102_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg103_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg135_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg209_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg224_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg130_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg131_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg211_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg217_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg84_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg94_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg95_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg77_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg62_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg241_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg60_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg73_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg10_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg57_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg12_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg23_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg11_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg1_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg54_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg20_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg55_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg145_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg147_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg128_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg120_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg231_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg190_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg235_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg239_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg192_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg115_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg99_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg97_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg100_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg112_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg101_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg80_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg133_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg193_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg218_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg82_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg223_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg89_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg215_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg91_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg85_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg220_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg87_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg93_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg83_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg81_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg79_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg72_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg3_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg69_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg71_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg58_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg70_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg64_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg61_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg63_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg30_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg14_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg2_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg50_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg59_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg51_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg33_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg41_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg46_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg184_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg44_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg127_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg249_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg191_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg229_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg226_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg36_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg228_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg233_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg35_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg34_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg238_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg225_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg240_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg98_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg237_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg110_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg109_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg212_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg210_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg219_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg88_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg214_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg74_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg199_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg198_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg254_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg6_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg251_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg40_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg252_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg245_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg52_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg38_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg49_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg39_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg125_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg123_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg180_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg118_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg119_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg121_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg116_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg117_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg45_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg114_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg232_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg124_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg42_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg186_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg179_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg183_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg37_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg181_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg188_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg187_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg196_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg205_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg208_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg222_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg86_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg243_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg216_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg202_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg256_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg248_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg255_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg7_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg8_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg253_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg242_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg4_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg247_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg246_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg250_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg244_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg122_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg185_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg178_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <proc/uart_unit/fifo_tx_unit/Mram_array_reg230_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network rx_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 256 more times for the
+   following (max. 5 shown):
+   proc/uart_unit/fifo_tx_unit/Mram_array_reg3842/SPO,
+   proc/uart_unit/fifo_tx_unit/Mram_array_reg3841/SPO,
+   proc/uart_unit/fifo_tx_unit/Mram_array_reg3822/SPO,
+   proc/uart_unit/fifo_tx_unit/Mram_array_reg3821/SPO,
+   proc/uart_unit/fifo_tx_unit/Mram_array_reg3812/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| clk                                | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| rx                                 | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| sw                                 | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| tx                                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
